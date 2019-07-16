@@ -12,4 +12,16 @@ install_github('karabanb/BKmisc')
 library(BKmisc)
 BKmisc::start_proj()
 
+#some updates
+
+range <- function(x) {
+  max(x) - min(x)
+}
+  
+# lub range(1:4)[2] - range(1:4)[1]
+
+range(1:4)
+
+#unikamy pokrywania sie nazw funkcji poprzez dodanie nazwy pakietu:: , np base::funkcja
+base::range(1:4)
 
