@@ -25,3 +25,30 @@ range(1:4)
 #unikamy pokrywania sie nazw funkcji poprzez dodanie nazwy pakietu:: , np base::funkcja
 base::range(1:4)
 
+#do IQR funkcja wbudowana ; rozstep miedzykwartylowy
+IQR(v1)
+IQR(v2)
+
+quantile(v1)
+#rozny type inny wynik , najczesciej 5 i 6
+quantile(v1, type = 5)
+
+
+#wariancja
+#odchylenie standardowe - pierwiastek z wariancji
+#R bierze N-1 (z proby) przy wariancji i sd ; we wzorze N (z populacji) dlatego ciut inny wynik
+var (v1)
+var (v2)
+sd(v1)
+sd(v2)
+mean(v1)
+mean(v2)
+
+#wspolczynnik zmiennosci - stosunek odchylenia sd do sredniej arytmetycznej
+
+sd(v1)/mean(v1)*100
+#wsp zmiennosci 52%  - w danym zbiorze odchylenie sd jest rowne 52% sredniej
+
+sd(v2)/mean(v2)*100
+#wsp zmiennosci 20% - w danym zbiorze odchylenie sd jest rowne 20% sredniej
+
