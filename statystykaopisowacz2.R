@@ -59,11 +59,11 @@ sd(v2)/mean(v2)*100
 var_withn <- function(x) {
   sumcia <- 0
   for (i in 1:length(x)) {
-  b <- sum((x[i] - mean(x))^2)
-  sumcia <- sumcia + b
-  i <- i + 1
+    b <- sum((x[i] - mean(x)) ^ 2)
+    sumcia <- sumcia + b
+    i <- i + 1
   }
-  print(sumcia / (length(x)-1))
+  print(sumcia / (length(x) - 1))
 }
 var_withn(v1)
 var(v1)
@@ -80,3 +80,12 @@ sd_withn <- function(x) {
 
 sd(v2)
 sd_withn(v2)
+
+# moze mozna prosciej?
+
+var_bk <- function(x) {
+  n <- length(x)
+  sum((x - mean(x)) ^ 2) / (n - 1)
+}
+
+var_bk(v1)
