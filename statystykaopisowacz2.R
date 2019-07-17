@@ -52,3 +52,31 @@ sd(v1)/mean(v1)*100
 sd(v2)/mean(v2)*100
 #wsp zmiennosci 20% - w danym zbiorze odchylenie sd jest rowne 20% sredniej
 
+#w rozkladzie normalnym 68% obserwacji pomiedzy -1 i 1 odchyleniem stand (krzywa gaussa/dzwonowa)
+#regula 3 sigm ; 
+
+
+var_withn <- function(x) {
+  sumcia <- 0
+  for (i in 1:length(x)) {
+  b <- sum((x[i] - mean(x))^2)
+  sumcia <- sumcia + b
+  i <- i + 1
+  }
+  print(sumcia / (length(x)-1))
+}
+var_withn(v1)
+var(v1)
+
+sd_withn <- function(x) {
+  sumcia <- 0
+  for (i in 1:length(x)) {
+    b <- sum((x[i] - mean(x))^2)
+    sumcia <- sumcia + b
+    i <- i + 1
+  }
+  print((sumcia / (length(x)-1))^0.5)
+}
+
+sd(v2)
+sd_withn(v2)
